@@ -16,6 +16,21 @@ public class Problema00 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        int[] datos = {10, 2, 4, 1};
+        System.out.printf("%d\n", misterio(datos, datos.length));
     }
-    
+
+    public static int misterio(int[] arreglo, int tamanio) {
+
+        if (tamanio == 1) {
+            return arreglo[0];
+        } else {
+            return arreglo[tamanio - 1] + misterio(arreglo, tamanio - 1);
+        }
+    }
 }
+
+/*En el problema podemos observar la suma de todos los elementos del arreglo 
+mediante el procedimieto de una función
+*/
